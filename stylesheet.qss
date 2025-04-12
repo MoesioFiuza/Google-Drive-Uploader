@@ -1,0 +1,128 @@
+/* stylesheet.qss - Modern Dark Theme v2 */
+
+QMainWindow, QWidget {
+    background-color: #282c34; /* Um cinza escuro azulado */
+    color: #abb2bf; /* Cinza claro para texto padrão */
+    /* Tenta usar fontes comuns e limpas, com fallback genérico */
+    font-family: "Segoe UI", Cantarell, "Ubuntu", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    border: none;
+}
+
+QLabel {
+    background-color: transparent;
+    color: #abb2bf; /* Cor padrão para labels */
+    border: none;
+    border-radius: 0;
+    padding: 2px; /* Pequeno padding para respiro */
+}
+
+/* Labels que mostram valores podem ser um pouco mais claros */
+#StatusValueLabel, #FolderValueLabel,
+#FilesValueLabel, #SizeValueLabel,
+#EtaValueLabel, #ElapsedValueLabel { /* Definir objectName no Python se quiser este estilo */
+    color: #c8cdd4; /* Mais claro que labels normais */
+    /* font-weight: normal; */ /* Pode ajustar o peso */
+}
+
+QLineEdit {
+    padding: 8px 10px;
+    border: 1px solid #3c4049; /* Borda sutil */
+    border-radius: 6px;
+    background-color: #21252b; /* Pouco mais escuro que o fundo */
+    color: #c8cdd4;
+    font-size: 14px;
+}
+
+QLineEdit:read-only {
+     background-color: #2c313a;
+     color: #888c93;
+     border: 1px solid #3a3f48;
+}
+
+QLineEdit:focus {
+    border: 1px solid #528bff; /* Borda azul ao focar */
+    background-color: #282c34;
+}
+
+QPushButton {
+    background-color: #3a3f48; /* Cinza médio escuro */
+    color: #c8cdd4;
+    border: 1px solid #4a505a;
+    padding: 9px 18px; /* Padding ligeiramente ajustado */
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #4a505a;
+    border: 1px solid #5a606a;
+}
+
+QPushButton:pressed {
+    background-color: #5a606a;
+}
+
+/* Adiciona um indicador visual para foco com teclado */
+QPushButton:focus {
+    border: 1px solid #528bff; /* Mesma cor de foco do QLineEdit */
+    outline: none; /* Remove outline pontilhado padrão se houver */
+}
+
+
+QPushButton:disabled {
+    background-color: #2a2e34;
+    color: #6a707a;
+    border: 1px solid #3a3f48;
+}
+
+/* Barra de Progresso Customizada */
+CustomProgressBar {
+    border: 1px solid #3c4049;
+    border-radius: 8px;
+    background-color: #21252b;
+    text-align: center;
+    color: #eeeeee; /* Texto branco para bom contraste com chunk */
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 22px;
+    max-height: 22px;
+}
+
+CustomProgressBar::chunk {
+    background-color: qlineargradient(x1:0, y1:0.5, x2:1, y2:0.5,
+        stop:0 #528bff, stop:1 #65c7f7); /* Gradiente Azul claro */
+    border-radius: 7px;
+    margin: 1px;
+}
+
+/* Tooltip */
+QToolTip {
+    color: #eeeeee;
+    background-color: #1c1e22;
+    border: 1px solid #5a606a;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 240;
+}
+
+/* Notificação Elegante */
+QWidget#ElegantNotificationWidget {
+     background-color: rgba(30, 30, 30, 230);
+     border: 1px solid #5a606a;
+     border-radius: 10px;
+     padding: 15px;
+}
+QWidget#ElegantNotificationWidget QLabel {
+    color: #eeeeee;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Imagem do ETA */
+#EtaImageLabel {
+    background-color: transparent;
+}

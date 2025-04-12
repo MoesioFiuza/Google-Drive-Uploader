@@ -1,0 +1,32 @@
+# Python Virtual Environment
+# Ignora a pasta do ambiente virtual (ajuste o nome se for diferente de 'env')
+/env/
+/venv/
+/.venv/
+
+# Python Cache e arquivos compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de Token e Credenciais - MUITO IMPORTANTE IGNORAR!
+credentials.json
+token.json
+*.token
+
+# Arquivos de Log
+drive_upload.log
+*.log
+
+# Arquivos gerados pelo Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Configurações de IDEs comuns (Opcional, mas recomendado)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
