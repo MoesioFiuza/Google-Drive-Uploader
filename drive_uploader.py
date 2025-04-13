@@ -1,4 +1,3 @@
-# drive_uploader.py
 import os
 import sys
 import datetime
